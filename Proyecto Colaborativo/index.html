@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Preguntas Interactiva Avanzada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Juego de Preguntas Interactiva</h1>
+
+    
+    <div id="start-screen">
+        <input type="text" id="player-name" placeholder="Ingresa tu nombre">
+        <select id="category-select">
+            <option value="general">General</option>
+            <option value="ciencia">Ciencia</option>
+            <option value="historia">Historia</option>
+            <option value="tecnologia">Tecnología</option>
+        </select>
+        <button onclick="startGame()">Comenzar</button>
+        <button onclick="toggleTheme()">Modo Oscuro</button>
+    </div>
+
+    <div id="quiz-screen" class="hidden">
+        <h2 id="question"></h2>
+        <div id="options"></div>
+        <p>Puntos: <span id="score">0</span></p>
+        <p>Nivel: <span id="level">1</span></p>
+        <p>Tiempo: <span id="timer">30</span>s</p>
+    </div>
+
+
+    <div id="end-screen" class="hidden">
+        <h2>¡Juego terminado!</h2>
+        <p id="final-score"></p>
+        <h3>Ranking</h3>
+        <div id="ranking-list"></div>
+        <button onclick="restartGame()">Jugar de nuevo</button>
+    </div>
+
+    <audio id="correct-sound" src="correct.mp3">
+    <audio id="wrong-sound" src="wrong.mp3">
+
+    <script src="script.js"></script>
+</body>
+</html>
